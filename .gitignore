@@ -1,0 +1,11 @@
+#ignore myenv folder
+myenv/
+
+#ignore pycache
+__pycache__/
+
+#ignore credentials
+config.yaml
+
+#ignore parquet file
+citation_data.parquet

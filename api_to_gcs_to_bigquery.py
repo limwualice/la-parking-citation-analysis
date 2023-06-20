@@ -19,9 +19,9 @@ def auth(app_token, username, password):
     api_client = Socrata("data.lacity.org", app_token, username=username, password=password)
     return api_client
 
-def extract_data(api_client, limit, offset):
+def extract_data(api_client, limit , offset):
     # results returned as JSON from API / converted to Python list of dictionaries by sodapy.
-    results = api_client.get("wjz9-h9np", limit=limit, offset=offset)
+    results = api_client.get("wjz9-h9np", limit=limit, offset=offset, select="ticket_number, issue_date, issue_time, rp_state_plate,	plate_expiry_date, make, body_style, color, location, route, agency, violation_code, violation_description, fine_amount")
 
     # Convert to pandas DataFrame
     results_df = pd.DataFrame.from_records(results)
@@ -75,7 +75,7 @@ def bigquery_table():
 def api_to_bigquery() -> None:
     """The main ETL function"""
     limit = 1000000
-    offset= 1000000
+    offset= 1000001
     api_client = auth(app_token, username, password)
     for i in range(0,17):
         df = extract_data(api_client, limit, i*offset)
