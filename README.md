@@ -1,4 +1,4 @@
-# LA Parking Citation Analysis
+# LA Parking Fines Analysis
 
 This project focuses on analyzing LA parking citation data using the Socrata API and storing the data in Google BigQuery for further analysis and visualization.
 
