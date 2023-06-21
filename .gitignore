@@ -9,3 +9,6 @@ config.yaml
 
 #ignore parquet file
 citation_data.parquet
+
+#ignore app.py
+app.py
