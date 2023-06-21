@@ -2,6 +2,9 @@
 
 This project focuses on analyzing LA parking citation data using the Socrata API and storing the data in Google BigQuery for further analysis and visualization.
 
+![laparking](https://github.com/limwualice/la-parking-citation-analysis/assets/125330688/c0731fa4-a84f-473d-b5ea-c286ccc6475b)
+
+
 ## Project Overview
 
 The LA Parking Citation Analysis project aims to explore and gain insights from the parking citation data provided by the City of Los Angeles. The project involves fetching the data from the Socrata API, storing it in Google Cloud Storage, and loading it into Google BigQuery for analysis.
